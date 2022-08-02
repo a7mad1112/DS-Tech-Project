@@ -1,0 +1,124 @@
+.services {
+    text-align: center;
+}
+.services .content {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 60px;
+}
+.services .content .imag img {
+    width: 100%;
+}
+.services .content .text {
+    text-align: left;
+}
+.srv-heading {
+    font-size: 45px;
+    text-transform: capitalize;
+    position: relative;
+}
+.srv-heading::after {
+    content: '';
+    width: 100px;
+    height: 7px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, transparent, #2affbb, #2affbb);
+    position: absolute;
+    bottom: -50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.services .content .text p {
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+.services .content .text > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.services .content .text .right {
+    justify-content: flex-start;
+}
+.services .left-arrow, .services .right-arrow {
+    width: 235px;
+}
+.services .left-arrow {
+    transform: rotate(120deg);
+}
+.services .right-arrow {
+    transform: rotate(296deg);
+}
+.services .content .text button {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid #026956;
+    color: #026956;
+    background-color: #a6ffef;
+    box-shadow: 0 4px 8px 0 rgb(0 237 193 / 58%), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: 0.4s;
+}
+.services .content .text button:hover {
+    animation-name: srv-btn;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background-color: white;
+}
+@keyframes srv-btn {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media(max-width: 1000px) {
+    .srv-heading {
+        font-size: 30px;
+    }
+    .srv-heading::after {
+        width: 80px;
+        height: 5px;
+        left: 10px;
+    }
+}
+@media(max-width: 767px) {
+    .services .content {
+        padding-top: 50px;
+        grid-template-columns: 100%;
+        grid-gap: 0;
+    }
+    .services .content .text {
+        margin-bottom: 30px;
+    }
+    .services .content .text > div {
+        justify-content: center;
+    }
+    .services .left-arrow, .services .right-arrow  {
+        display: none;
+    }
+    .services .content .text button {
+        margin-top: 25px;
+    }
+}
+@media(max-width: 567px) {
+    .srv-heading {
+        font-size: 25px;
+    }
+    .services .content .text button {
+        width: 90px;
+        height: 90px;
+        font-size: 14px;
+    }
+} 
